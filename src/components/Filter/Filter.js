@@ -1,12 +1,9 @@
 import {Container, Row, Form} from "react-bootstrap";
-import SearchForm from "../Search/SearchForm";
 import {useEffect, useState} from "react";
-import {useHistory} from "react-router-dom";
 import {categories, countries, languages} from "../../constatnts/constatns";
 
 
 export default function Filter() {
-    const [searchValue, setSearchValue] = useState('');
 
     const [category, setCategory] = useState([]);
     const [language, setLanguage] = useState([]);
@@ -14,36 +11,13 @@ export default function Filter() {
 
 
     useEffect(() => {
-        console.log(categories)
-        console.log(languages)
-        console.log(countries)
+
     }, [])
-
-    useEffect(() => {
-        console.log(country)
-
-    }, [country])
-
-    let history = useHistory();
-    // const handleSearchOnChange = (event) => {
-    //     event.preventDefault();
-    //     setSearchValue(event.target.value);
-    // }
-    // const handleSearchSubmit = (event) => {
-    //     event.preventDefault()
-    //     const path = `/search/searchValue/${searchValue}`
-    //     history.push(path)
-    // }
-
-
-    const onCategoryClick = (c) => {
-        setCategory(c);
-    }
 
     return (
         <Container>
             <Row>
-                {/*<SearchForm handleOnChange={handleSearchOnChange} handleSubmit={handleSearchSubmit} />*/}
+                SearchBox
             </Row>
             <Row>
                 <h2>Country</h2>
